@@ -4,10 +4,13 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import nextConfig from '../next.config.mjs'; // Corrected path
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
+
+const basePath = nextConfig.basePath || ''; // Get basePath
 
 const CompanySection = () => {
   const sectionRef = useRef(null);
@@ -60,7 +63,7 @@ const CompanySection = () => {
   }, []);
 
   return (
-    <section id="company" ref={sectionRef} className="py-16 md:py-24 bg-white dark:bg-gray-900 overflow-hidden">
+    <section id="company" ref={sectionRef} className="py-16 md:py-24 bg-white dark:bg-gray-900 overflow-hidden scroll-mt-20 md:scroll-mt-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
           About Chessman Solutions
@@ -69,11 +72,12 @@ const CompanySection = () => {
           <div ref={ceoColRef} className="md:col-span-1 text-center md:text-left invisible translate-y-[50px]">
             <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto md:mx-0 mb-6 rounded-full overflow-hidden shadow-lg border-4 border-primary">
               <Image
-                src="/assets/ceo.jpg"
+                src={`${basePath}/assets/ceo.jpg`} // Add basePath here
                 alt="Valerie Chessman, RN CCM - CEO of Chessman Solutions"
                 layout="fill"
                 objectFit="cover"
                 className="rounded-full"
+                style={{ objectPosition: 'center 0%' }} // Adjust the percentage (e.g., 80%, 90%) as needed
               />
             </div>
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-1">

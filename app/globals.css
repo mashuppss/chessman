@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+    /* Add this line */
+}
+
 /* Optional: Add minimal base styles if needed, but Tailwind's preflight handles most resets */
 body {
     /* Example: Define a default font if not handled by layout.tsx or Tailwind config */

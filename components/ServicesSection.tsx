@@ -65,7 +65,7 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section id="services" ref={sectionRef} className="py-16 md:py-24 bg-card-light dark:bg-card-dark overflow-hidden">
+    <section id="services" ref={sectionRef} className="py-16 md:py-24 bg-card-light dark:bg-card-dark overflow-hidden scroll-mt-20 md:scroll-mt-24">
       <div className="container mx-auto px-4">
         <h2 ref={titleRef} className="text-3xl md:text-4xl font-bold text-center mb-12 text-text-light dark:text-text-dark invisible translate-y-[50px]">
           Our Speciality Services
