@@ -60,7 +60,6 @@ const TestimonialsSection = () => {
   const titleRef = useRef(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
-  // --- GSAP useEffect remains the same ---
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.to(titleRef.current, {
@@ -70,7 +69,7 @@ const TestimonialsSection = () => {
         ease: 'power3.out',
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top 80%',
+          start: 'top 80%', // Keep or adjust as needed
           toggleActions: 'play none none none',
         },
       });
@@ -79,11 +78,12 @@ const TestimonialsSection = () => {
         autoAlpha: 1,
         y: 0,
         duration: 0.6,
-        stagger: 0.2,
+        stagger: 0.2, // Add stagger here
         ease: 'power3.out',
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top 70%',
+          // Adjust start point slightly if needed
+          start: 'top 75%',
           toggleActions: 'play none none none',
         },
       });
@@ -91,11 +91,8 @@ const TestimonialsSection = () => {
 
     return () => ctx.revert();
   }, []);
-  // --- End GSAP useEffect ---
-
 
   return (
-    // Add scroll-mt here
     <section id="testimonials" ref={sectionRef} className="py-16 md:py-24 bg-card-light dark:bg-card-dark overflow-hidden scroll-mt-20 md:scroll-mt-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Use theme colors for text */}

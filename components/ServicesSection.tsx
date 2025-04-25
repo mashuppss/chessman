@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { FaHeartbeat, FaUsers, FaHandHoldingHeart, FaHome, FaUserMd, FaBuilding } from 'react-icons/fa';
+import { FaBriefcaseMedical, FaUserFriends, FaHandHoldingHeart, FaBalanceScale, FaShieldAlt, FaHome } from 'react-icons/fa';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -18,12 +18,12 @@ interface Service {
 
 // Updated services data with longer descriptions
 const services: Service[] = [
-  { id: 1, title: 'RN Medical Guidance', description: 'Leverage the expertise of registered nurses for clear medical advice, medication management reviews, understanding diagnoses, and navigating complex healthcare decisions with confidence.', icon: FaUserMd },
-  { id: 2, title: 'Client Advocacy & Navigation', description: 'Receive dedicated support in communicating with healthcare providers, understanding treatment options, and navigating the complexities of the healthcare system to ensure your voice is heard.', icon: FaHeartbeat },
-  { id: 3, title: 'Family Support & Mediation', description: 'Comprehensive support services designed to assist families in managing care responsibilities, facilitating communication, and mediating discussions about care planning and decision-making.', icon: FaUsers },
+  { id: 1, title: 'RN Medical Guidance', description: 'Leverage the expertise of registered nurses for clear medical advice, medication management reviews, understanding diagnoses, and navigating complex healthcare decisions with confidence.', icon: FaBriefcaseMedical },
+  { id: 2, title: 'Client Advocacy & Navigation', description: 'Receive dedicated support in communicating with healthcare providers, understanding treatment options, and navigating the complexities of the healthcare system to ensure your voice is heard.', icon: FaUserFriends },
+  { id: 3, title: 'Family Support & Mediation', description: 'Comprehensive support services designed to assist families in managing care responsibilities, facilitating communication, and mediating discussions about care planning and decision-making.', icon: FaHandHoldingHeart },
   { id: 4, title: 'Home Care Coordination', description: 'Expert assistance in arranging, coordinating, and managing in-home care services, ensuring seamless integration with your lifestyle and medical needs for optimal comfort and safety.', icon: FaHome },
-  { id: 5, title: 'Private Duty Referrals', description: 'Connecting you with vetted, high-quality private caregivers and agencies tailored to specific needs, ensuring reliable and compassionate personal care and companionship.', icon: FaHandHoldingHeart },
-  { id: 6, title: 'Facility Placement Assistance', description: 'Guidance through the process of selecting appropriate rehabilitation, assisted living, or long-term care facilities, including assessments, tours, and transition support.', icon: FaBuilding },
+  { id: 5, title: 'Private Duty Referrals', description: 'Connecting you with vetted, high-quality private caregivers and agencies tailored to specific needs, ensuring reliable and compassionate personal care and companionship.', icon: FaShieldAlt },
+  { id: 6, title: 'Facility Placement Assistance', description: 'Guidance through the process of selecting appropriate rehabilitation, assisted living, or long-term care facilities, including assessments, tours, and transition support.', icon: FaBalanceScale },
 ];
 
 const ServicesSection = () => {
@@ -55,7 +55,7 @@ const ServicesSection = () => {
         ease: 'power3.out',
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top 70%',
+          start: 'top 75%',
           toggleActions: 'play none none none',
         },
       });
@@ -65,7 +65,7 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section id="services" ref={sectionRef} className="py-16 md:py-24 bg-card-light dark:bg-card-dark overflow-hidden scroll-mt-20 md:scroll-mt-24">
+    <section id="services" ref={sectionRef} className="py-16 md:py-24 bg-gray-50 dark:bg-gray-800 overflow-hidden scroll-mt-20 md:scroll-mt-24">
       <div className="container mx-auto px-4">
         <h2 ref={titleRef} className="text-3xl md:text-4xl font-bold text-center mb-12 text-text-light dark:text-text-dark invisible translate-y-[50px]">
           Our Speciality Services
