@@ -1,5 +1,5 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/aging-life-care/page": "app/aging-life-care/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/aging-life-care/page": "app/aging-life-care/page.js"
 }

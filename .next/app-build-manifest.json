@@ -17,14 +17,6 @@
       "static/chunks/609-4600abb3455765a1.js",
       "static/chunks/app/layout-dc0157ca126423a3.js"
     ],
-    "/aging-life-care/page": [
-      "static/chunks/webpack-2e62d7fdd859ac65.js",
-      "static/chunks/fd9d1056-0b3b14906fa46304.js",
-      "static/chunks/117-ab721d3215bca51b.js",
-      "static/chunks/main-app-154d6f7656d601c9.js",
-      "static/chunks/609-4600abb3455765a1.js",
-      "static/chunks/app/aging-life-care/page-5fc92a1f7bfc0166.js"
-    ],
     "/page": [
       "static/chunks/webpack-2e62d7fdd859ac65.js",
       "static/chunks/fd9d1056-0b3b14906fa46304.js",
@@ -35,6 +27,14 @@
       "static/chunks/609-4600abb3455765a1.js",
       "static/chunks/966-d71d83b2c97cb245.js",
       "static/chunks/app/page-dce463ca7de658b3.js"
+    ],
+    "/aging-life-care/page": [
+      "static/chunks/webpack-2e62d7fdd859ac65.js",
+      "static/chunks/fd9d1056-0b3b14906fa46304.js",
+      "static/chunks/117-ab721d3215bca51b.js",
+      "static/chunks/main-app-154d6f7656d601c9.js",
+      "static/chunks/609-4600abb3455765a1.js",
+      "static/chunks/app/aging-life-care/page-5fc92a1f7bfc0166.js"
     ]
   }
 }
